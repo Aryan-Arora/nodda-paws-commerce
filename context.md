@@ -100,7 +100,7 @@ Phase 0 is not complete. Visual direction, framework, service naming and product
 
 Aryan has approved the broad sequencing: frontend design first, backend foundation in Phase 3 and working catalogue/inventory backend in Phase 4. “Frontend first” means an approved high-fidelity prototype with realistic mock data, not a disconnected production frontend that later needs to be rebuilt around the data model.
 
-Design Sprint 1 has started as reversible prototype work while remaining Phase 0/1 business facts stay open. The working visual mix is Birthday Poster for brand/discovery and Cosy Catalogue discipline for shopping. Prototype placeholders are explicitly labelled and cannot ship to production.
+Design Sprint 1 has started as reversible prototype work while remaining Phase 0/1 business facts stay open. The active visual direction is **premium-playful neighbourhood concept store**: editorial Fraunces typography and calm commerce structure, warmed by Noddy-led ochre, moss and coral accents, organic arches, soft pills and restrained character moments. The earlier bright poster/clay treatment and the subsequent monochrome boutique pass were both rejected as extremes. Prototype placeholders are explicitly labelled and cannot ship to production.
 
 ## Next recommended work
 

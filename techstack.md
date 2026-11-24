@@ -96,12 +96,15 @@ Store money as integer paise. Order items snapshot purchased names, SKUs, varian
 
 ### Brand and discovery
 
-- Direction A / Birthday Poster: sun yellow, logo-true sky blue, ink borders, hard shadows and Noddy-led storytelling.
-- Use for the homepage, campaign banners, collection launches, offers and service entry points.
+- Active direction: premium-playful neighbourhood concept store.
+- Use editorial Fraunces typography, warm ivory space and a deep moss foundation.
+- Add personality through a restrained ochre/coral accent system, Noddy moments, organic arches, soft pills and occasional hand-drawn details.
+- Avoid both extremes already tested: chunky clay/poster styling and austere monochrome luxury styling.
+- Use this balance for the homepage, campaign banners, collection launches, offers and service entry points.
 
 ### Commerce
 
-- Direction B / Cosy Catalogue discipline: calm cream surfaces, consistent grids and strong product/price hierarchy.
+- Keep Cosy Catalogue discipline: calm cream surfaces, consistent grids and strong product/price hierarchy, with softly rounded media and small warm accents.
 - Use for listing, search, product details, cart and checkout.
 - No decorative tilt or stickers in address, payment, policy or error interfaces.
 

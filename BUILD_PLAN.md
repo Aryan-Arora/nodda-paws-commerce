@@ -29,6 +29,16 @@ Four workstreams run through the phases:
 
 Some work can happen in parallel, but the phase gates protect transactional correctness.
 
+### Agreed sequencing
+
+Aryan has chosen a frontend-first sequence:
+
+1. Complete the responsive visual system and high-fidelity customer/staff prototypes in Phase 2.
+2. Start the application, environments, authentication and database foundation in Phase 3.
+3. Build the real catalogue and inventory backend in Phase 4.
+
+The Phase 2 frontend uses realistic mock data and covers all transactional states. It is a design/prototype contract, not a separate production codebase. Production components are connected to the real schema from Phase 3 onward to avoid rebuilding the storefront.
+
 ---
 
 ## Phase 0 — Lock the project foundation
@@ -103,6 +113,8 @@ Understand what the system must sell and how the shop will actually operate it.
 ### Goal
 
 Turn the approved visual direction into a coherent responsive system before building every page.
+
+This is the first active build/design phase after project decisions and catalogue discovery. Frontend experience is completed and approved before backend implementation begins.
 
 ### Work
 

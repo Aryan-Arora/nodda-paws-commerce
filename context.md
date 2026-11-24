@@ -22,6 +22,7 @@ The website must let customers browse and purchase stocked products, enquire abo
 - Public Instagram reels load only after a tap and are not re-hosted without supplied originals/permission.
 - Mobile-first experience.
 - One shared local working copy on `main`, with small commits pushed immediately.
+- Execution order: complete the frontend design and responsive prototype first; begin the application/backend foundation in Phase 3 and the catalogue/inventory backend in Phase 4.
 
 ## Recommended direction awaiting formal approval
 
@@ -94,6 +95,8 @@ The website must let customers browse and purchase stocked products, enquire abo
 **Phase 0 — Lock the project foundation.** See `BUILD_PLAN.md`.
 
 Phase 0 is not complete. Visual direction, framework, service naming and production account ownership still need approval.
+
+Aryan has approved the broad sequencing: frontend design first, backend foundation in Phase 3 and working catalogue/inventory backend in Phase 4. “Frontend first” means an approved high-fidelity prototype with realistic mock data, not a disconnected production frontend that later needs to be rebuilt around the data model.
 
 ## Next recommended work
 

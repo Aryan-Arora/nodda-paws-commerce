@@ -2,6 +2,11 @@
 
 Newest first. Keep entries short: what changed, which files, what is next, anything left open.
 
+## 2026-11-24, Codex / GPT (sequence decision)
+- Aryan approved frontend-first sequencing: responsive design/prototype in Phase 2, backend foundation in Phase 3, catalogue/inventory backend in Phase 4.
+- Updated `BUILD_PLAN.md` and `context.md`. Phase 2 uses realistic mock data but is not a separate throwaway production frontend.
+- Next: finish Phase 0 approvals, gather enough Phase 1 catalogue shape to design realistic product states, then start Phase 2.
+
 ## 2026-11-24, Codex / GPT (build roadmap)
 - Added `BUILD_PLAN.md`: gated roadmap covering foundation, discovery, design, application setup, catalogue, storefront, cart, payments, fulfilment, brand/services, QA, UAT and launch stabilization.
 - Updated shared instructions and `context.md`; project is currently in Phase 0.

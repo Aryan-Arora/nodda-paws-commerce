@@ -1,3 +1,46 @@
+document.documentElement.classList.add('motion-ready');
+
+const revealGroups = [
+  '.practical-grid > div',
+  '.section-heading',
+  '.collection-banner',
+  '.product-card',
+  '.service-card',
+  '.feature-photo, .feature-copy',
+  '.reel-card',
+  '.notice-grid > *',
+  '.community-grid > *',
+  '.question-layout > *',
+  '.visit-grid > *',
+  '.catalogue-hero-grid > *',
+  '.catalogue-card',
+  '.empty-state'
+];
+
+const revealElements = [];
+
+revealGroups.forEach((selector) => {
+  document.querySelectorAll(selector).forEach((element, index) => {
+    element.dataset.reveal = '';
+    element.style.setProperty('--reveal-delay', `${Math.min(index * 60, 180)}ms`);
+    revealElements.push(element);
+  });
+});
+
+if ('IntersectionObserver' in window) {
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.dataset.visible = 'true';
+      observer.unobserve(entry.target);
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: .12 });
+
+  revealElements.forEach((element) => revealObserver.observe(element));
+} else {
+  revealElements.forEach((element) => { element.dataset.visible = 'true'; });
+}
+
 const menuButton = document.querySelector('.menu-trigger');
 const mobileMenu = document.querySelector('.mobile-menu');
 

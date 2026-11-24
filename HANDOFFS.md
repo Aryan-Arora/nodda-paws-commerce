@@ -2,6 +2,11 @@
 
 Newest first. Keep entries short: what changed, which files, what is next, anything left open.
 
+## 2026-11-24, Codex / GPT (prototype motion)
+- Added restrained motion to `prototype/`: one-time hero entrance, IntersectionObserver section reveals, fine-pointer card feedback and search-dialog entrance.
+- Motion uses transform/opacity only, plays once, has no looping decoration and falls back to short opacity fades for reduced motion.
+- Next: visually feel-check desktop/mobile timing, then continue Design Sprint 2 product detail.
+
 ## 2026-11-24, Codex / GPT (design started)
 - Added `DESIGN_PLAN.md` and began Design Sprint 1 in `prototype/` with a responsive Birthday Poster homepage and calmer shop listing.
 - Prototype uses only verified facts and explicitly labelled product/media placeholders; no backend or live commerce behavior exists yet.

@@ -51,6 +51,7 @@ The website must let customers browse and purchase stocked products, enquire abo
 - Added `techstack.md` and `context.md` as shared living documents.
 - Added `BUILD_PLAN.md`, a gated 13-phase roadmap from decision lock through launch stabilization.
 - Added `DESIGN_PLAN.md` and started Design Sprint 1 with responsive homepage and shop-listing prototypes in `prototype/`.
+- Added the Sprint 1 motion system: one signature hero entrance, one-time section reveals, subtle card/button feedback and reduced-motion fades.
 
 ## Repository state
 

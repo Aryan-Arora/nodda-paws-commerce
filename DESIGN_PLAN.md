@@ -64,6 +64,16 @@ Exact brand colours remain provisional until the original logo arrives.
 - Checkout: no tilted surfaces, stickers or decorative shadows around factual fields.
 - Maximum two stickers in one viewport.
 
+### Motion
+
+- The hero is the single signature motion moment: awning, headline, doorway and tags settle once on load.
+- Long marketing sections reveal once as they enter the viewport; they do not replay when scrolling back.
+- Reveals use opacity and a short vertical transform with 30–80ms group staggering.
+- Buttons and cards use fast transform-only hover/press feedback, gated to devices with a fine pointer.
+- Search dialog uses a 200ms opacity/scale entrance tied to its state change.
+- No looping marquee, floating decoration, scroll hijacking or animated factual content.
+- Reduced motion removes positional movement and keeps only short opacity fades.
+
 ### Photography containers
 
 - Product photography: consistent clean background plus at least one approved on-pet image.

@@ -1,0 +1,25 @@
+# OS and editor
+.DS_Store
+.idea/
+.vscode/
+
+# Dependencies and build output (for when the site is built)
+node_modules/
+dist/
+build/
+.astro/
+.next/
+.vercel/
+coverage/
+
+# Secrets and local config: never commit
+.env
+.env.*
+*.pem
+
+# Agent and scratch files
+.claude/
+.codex/
+tmp/
+scratch/
+*.log

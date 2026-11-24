@@ -48,6 +48,7 @@ The website must let customers browse and purchase stocked products, enquire abo
 - Recommended a customer storefront plus a private staff operations dashboard.
 - Proposed Next.js, PostgreSQL, an inventory movement ledger, provider adapters and a phased build plan.
 - Added `techstack.md` and `context.md` as shared living documents.
+- Added `BUILD_PLAN.md`, a gated 13-phase roadmap from decision lock through launch stabilization.
 
 ## Repository state
 
@@ -88,18 +89,17 @@ The website must let customers browse and purchase stocked products, enquire abo
 - Staff roles and permissions
 - Domain, business email and account ownership
 
+## Current delivery phase
+
+**Phase 0 — Lock the project foundation.** See `BUILD_PLAN.md`.
+
+Phase 0 is not complete. Visual direction, framework, service naming and production account ownership still need approval.
+
 ## Next recommended work
 
-1. Lock the five immediate decisions above.
-2. Audit catalogue size and operational workflow with the client.
-3. Confirm provider accounts and ownership.
-4. Scaffold the application and database only after framework approval.
-5. Build staff authentication and draft catalogue management.
-6. Build collections, product variants and inventory ledger.
-7. Build cart, shipping calculation, payment verification and orders.
-8. Build fulfilment dashboard and manual tracking.
-9. Apply the approved visual system and real assets.
-10. Run end-to-end order, refund, accessibility, SEO and performance tests.
+1. Complete Phase 0 decisions in `BUILD_PLAN.md`.
+2. Begin Phase 1 catalogue and operations discovery with the client.
+3. Do not start transactional implementation until its preceding phase gate passes.
 
 ## Current blockers
 

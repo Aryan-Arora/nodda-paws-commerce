@@ -2,6 +2,11 @@
 
 Newest first. Keep entries short: what changed, which files, what is next, anything left open.
 
+## 2026-11-24, Codex / GPT (build roadmap)
+- Added `BUILD_PLAN.md`: gated roadmap covering foundation, discovery, design, application setup, catalogue, storefront, cart, payments, fulfilment, brand/services, QA, UAT and launch stabilization.
+- Updated shared instructions and `context.md`; project is currently in Phase 0.
+- Next: Aryan/Claude lock visual direction, framework, service naming and account ownership, then begin catalogue/operations discovery.
+
 ## 2026-11-24, Codex / GPT (shared context)
 - Added `techstack.md` and `context.md` as living documents for both agents.
 - Updated `AGENTS.md`, `CLAUDE.md` and `COLLABORATION.md` so both agents read and maintain them with every relevant task.

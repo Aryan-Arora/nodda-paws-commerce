@@ -50,6 +50,7 @@ The website must let customers browse and purchase stocked products, enquire abo
 - Proposed Next.js, PostgreSQL, an inventory movement ledger, provider adapters and a phased build plan.
 - Added `techstack.md` and `context.md` as shared living documents.
 - Added `BUILD_PLAN.md`, a gated 13-phase roadmap from decision lock through launch stabilization.
+- Added `DESIGN_PLAN.md` and started Design Sprint 1 with responsive homepage and shop-listing prototypes in `prototype/`.
 
 ## Repository state
 
@@ -97,6 +98,8 @@ The website must let customers browse and purchase stocked products, enquire abo
 Phase 0 is not complete. Visual direction, framework, service naming and production account ownership still need approval.
 
 Aryan has approved the broad sequencing: frontend design first, backend foundation in Phase 3 and working catalogue/inventory backend in Phase 4. “Frontend first” means an approved high-fidelity prototype with realistic mock data, not a disconnected production frontend that later needs to be rebuilt around the data model.
+
+Design Sprint 1 has started as reversible prototype work while remaining Phase 0/1 business facts stay open. The working visual mix is Birthday Poster for brand/discovery and Cosy Catalogue discipline for shopping. Prototype placeholders are explicitly labelled and cannot ship to production.
 
 ## Next recommended work
 

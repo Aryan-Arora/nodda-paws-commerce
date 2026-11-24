@@ -22,6 +22,7 @@ Both agents work in **this one folder**. Read this file before you touch anythin
 | `DESIGN.md`, `DESIGN_DIRECTIONS.md`, `directions-board.html` | Claude |
 | `proposals/GPT_*.md` and any file GPT creates | GPT |
 | `context.md`, `techstack.md`, `BUILD_PLAN.md` | Shared living state and roadmap: both agents read and update when relevant |
+| `DESIGN_PLAN.md`, `prototype/**` | Codex initially; shared review, coordinate before overlapping edits |
 | `COLLABORATION.md`, `AGENTS.md`, `CLAUDE.md`, `.gitignore`, `HANDOFFS.md` | Shared: small edits only, commit and push straight away |
 
 ## Handoffs

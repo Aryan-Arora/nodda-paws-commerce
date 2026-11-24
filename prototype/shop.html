@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Shop listing design prototype for Nodda Paws.">
+  <title>Shop — Nodda Paws design prototype</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,600;9..40,700&family=Fraunces:ital,opsz,wght@1,9..144,600&family=Paytone+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body class="catalogue-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="prototype-bar" role="note">Shop design prototype · No products, prices or stock are live</div>
+
+  <header class="site-header catalogue-header" data-header>
+    <div class="shell header-row">
+      <a class="brand" href="index.html" aria-label="Nodda Paws prototype home">
+        <span class="logo-placeholder" aria-hidden="true">Client<br>logo</span>
+        <span class="brand-name">Nodda Paws</span>
+      </a>
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="shop.html" aria-current="page">Shop</a>
+        <a href="index.html#services">Grooming</a>
+        <a href="index.html#services">Boarding / Day care</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#visit">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-action search-trigger" type="button" aria-label="Open product search"><span aria-hidden="true">⌕</span><span class="action-label">Search</span></button>
+        <button class="cart-action" type="button">Cart <span class="cart-count" aria-label="0 items">0</span></button>
+        <button class="menu-trigger" type="button" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
+      </div>
+    </div>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" hidden>
+      <a href="shop.html">Shop</a><a href="index.html#services">Grooming</a><a href="index.html#services">Boarding / Day care</a><a href="index.html#about">About</a><a href="index.html#visit">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="catalogue-hero">
+      <div class="shell catalogue-hero-grid">
+        <div>
+          <p class="eyebrow">The shop</p>
+          <h1>Good things for good pets.</h1>
+          <p>Calm catalogue structure for comparing real products. All entries below are layout placeholders.</p>
+        </div>
+        <div class="catalogue-note">
+          <strong>Catalogue status</strong>
+          <span>Products, prices, sizes and stock are being prepared.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalogue-toolbar" aria-label="Product controls">
+      <div class="shell toolbar-row">
+        <button class="filter-trigger" type="button" aria-expanded="false" aria-controls="filter-panel">Filters <span class="filter-count">0</span></button>
+        <p><strong>6</strong> prototype card states</p>
+        <label class="sort-control">Sort
+          <select>
+            <option>Featured</option>
+            <option>Price: low to high</option>
+            <option>Price: high to low</option>
+            <option>Newest</option>
+          </select>
+        </label>
+      </div>
+    </section>
+
+    <div class="shell shop-layout">
+      <aside class="filter-panel" id="filter-panel" aria-label="Product filters">
+        <div class="filter-heading"><h2>Filters</h2><button class="filter-close" type="button">Close</button></div>
+        <fieldset>
+          <legend>Category</legend>
+          <label><input type="checkbox"> Clothing</label>
+          <label><input type="checkbox"> Bedding</label>
+          <label><input type="checkbox"> Essentials</label>
+        </fieldset>
+        <fieldset>
+          <legend>Availability</legend>
+          <label><input type="checkbox"> In stock</label>
+          <label><input type="checkbox"> Sold out</label>
+        </fieldset>
+        <fieldset>
+          <legend>Pet</legend>
+          <label><input type="checkbox"> Dog</label>
+          <label><input type="checkbox"> Cat</label>
+        </fieldset>
+        <button class="button button-ink apply-filters" type="button">Apply prototype filters</button>
+      </aside>
+
+      <section class="catalogue-results" aria-labelledby="results-title">
+        <h2 class="visually-hidden" id="results-title">Prototype products</h2>
+        <div class="catalogue-grid">
+          <article class="catalogue-card">
+            <div class="catalogue-media photo-placeholder"><span>Primary packshot</span><span class="card-badge">Prototype</span></div>
+            <div class="catalogue-card-info">
+              <p class="product-kicker">Clothing</p><h3>Winter sweater product name</h3><p class="product-price">Price pending</p>
+              <div class="swatches" aria-label="Colour options"><span class="swatch swatch-sky"></span><span class="swatch swatch-sun"></span><span class="swatch swatch-ink"></span></div>
+            </div>
+          </article>
+          <article class="catalogue-card">
+            <div class="catalogue-media photo-placeholder"><span>On-pet image</span><span class="card-badge">Prototype</span></div>
+            <div class="catalogue-card-info">
+              <p class="product-kicker">Clothing</p><h3>Second clothing product</h3><p class="product-price">Price pending</p>
+              <div class="size-preview"><span>S</span><span>M</span><span>L</span></div>
+            </div>
+          </article>
+          <article class="catalogue-card">
+            <div class="catalogue-media photo-placeholder"><span>Product packshot</span><span class="card-badge">Prototype</span></div>
+            <div class="catalogue-card-info"><p class="product-kicker">Bedding</p><h3>Cosy blanket product name</h3><p class="product-price">Price pending</p></div>
+          </article>
+          <article class="catalogue-card">
+            <div class="catalogue-media photo-placeholder"><span>Product packshot</span><span class="card-badge">Prototype</span></div>
+            <div class="catalogue-card-info"><p class="product-kicker">Essentials</p><h3>Pet essential product name</h3><p class="product-price">Price pending</p></div>
+          </article>
+          <article class="catalogue-card sold-out-card">
+            <div class="catalogue-media photo-placeholder"><span>Sold-out state</span><span class="card-badge sold-out">Sold out</span></div>
+            <div class="catalogue-card-info"><p class="product-kicker">Prototype state</p><h3>Unavailable product example</h3><p class="product-price">Price pending</p></div>
+          </article>
+          <article class="catalogue-card">
+            <div class="catalogue-media photo-placeholder"><span>Variant image</span><span class="card-badge">Prototype</span></div>
+            <div class="catalogue-card-info"><p class="product-kicker">Essentials</p><h3>Multi-variant product example</h3><p class="product-price">Price pending</p><p class="variant-note">3 prototype variants</p></div>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <section class="catalogue-empty-preview">
+      <div class="shell empty-state">
+        <p class="eyebrow">Designed state</p>
+        <h2>No products match those filters.</h2>
+        <p>Clear one or more filters to see the full shop.</p>
+        <button class="button button-ink" type="button">Clear filters</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer compact-footer">
+    <div class="shell footer-grid">
+      <div><h2>Nodda Paws</h2><p>Curated By Paws, Approved By Tails.</p></div>
+      <div><h3>Prototype</h3><a href="index.html">Homepage design</a><a href="shop.html">Shop design</a></div>
+      <div><h3>Visit</h3><p>19/18A, G Block<br>Tilak Nagar, New Delhi 110018</p></div>
+    </div>
+  </footer>
+
+  <nav class="mobile-dock" aria-label="Quick actions"><a href="index.html">Home</a><a href="tel:+919650767651">Call</a><button type="button" class="dock-cart">Cart <span class="cart-count">0</span></button></nav>
+
+  <dialog class="search-dialog" aria-labelledby="search-title">
+    <form method="dialog" class="dialog-top"><h2 id="search-title">Search the shop</h2><button type="submit" class="close-button">Close</button></form>
+    <label for="prototype-search">Product search prototype</label>
+    <input id="prototype-search" type="search" placeholder="Try “winter sweater”" autocomplete="off">
+    <p>Search connects to the real catalogue during the commerce build.</p>
+  </dialog>
+</body>
+</html>
+

@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Frontend design prototype for the Nodda Paws commerce website.">
+  <title>Nodda Paws — Homepage design prototype</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,600;9..40,700&family=Fraunces:ital,opsz,wght@1,9..144,600&family=Paytone+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="prototype-bar" role="note">
+    Frontend design prototype · Product details, prices, hours and assets are placeholders
+  </div>
+
+  <header class="site-header" data-header>
+    <div class="shell header-row">
+      <a class="brand" href="index.html" aria-label="Nodda Paws prototype home">
+        <span class="logo-placeholder" aria-hidden="true">Client<br>logo</span>
+        <span class="brand-name">Nodda Paws</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="shop.html">Shop</a>
+        <a href="#services">Grooming</a>
+        <a href="#services">Boarding / Day care</a>
+        <a href="#about">About</a>
+        <a href="#visit">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-action search-trigger" type="button" aria-label="Open product search">
+          <span aria-hidden="true">⌕</span>
+          <span class="action-label">Search</span>
+        </button>
+        <a class="icon-action" href="tel:+919650767651">
+          <span aria-hidden="true">☎</span>
+          <span class="action-label">Call</span>
+        </a>
+        <button class="cart-action" type="button" aria-label="Open prototype cart">
+          Cart <span class="cart-count" aria-label="0 items">0</span>
+        </button>
+        <button class="menu-trigger" type="button" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
+      </div>
+    </div>
+
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" hidden>
+      <a href="shop.html">Shop</a>
+      <a href="#services">Grooming</a>
+      <a href="#services">Boarding / Day care</a>
+      <a href="#about">About</a>
+      <a href="#visit">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero poster-surface">
+      <div class="awning" aria-hidden="true"></div>
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow dark-label">Tilak Nagar · West Delhi</p>
+          <h1>Your pet’s favourite stop in <span>West Delhi.</span></h1>
+          <p class="hero-intro">A neighbourhood pet store, grooming studio and boarding / day-care destination at 19/18A, G Block.</p>
+          <div class="button-row">
+            <a class="button button-ink" href="shop.html">Shop the collection</a>
+            <a class="button button-paper" href="#services">Book grooming</a>
+          </div>
+          <a class="rating-badge" href="https://www.google.com/maps/search/?api=1&query=Nodda%20Paws%20Tilak%20Nagar" rel="noreferrer">
+            <span class="stars" aria-hidden="true">★★★★★</span>
+            <span><strong>4.8 on Google</strong> · 49 reviews <small>snapshot: 8 Nov 2026</small></span>
+          </a>
+        </div>
+
+        <div class="hero-visual" aria-label="Approved Noddy cut-out will appear here">
+          <div class="door-frame">
+            <div class="photo-placeholder photo-placeholder-dark">
+              <span>Approved Noddy<br>cut-out required</span>
+            </div>
+          </div>
+          <span class="sticker sticker-pink">Noddy says hi</span>
+          <span class="tag">Noddy approved</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div>Shop <b>✦</b> Grooming <b>✦</b> Boarding <b>✦</b> Day care <b>✦</b> Tilak Nagar <b>✦</b> Curated by paws</div>
+    </div>
+
+    <section class="practical" aria-label="Contact information">
+      <div class="shell practical-grid">
+        <div>
+          <span class="meta-label">Visit</span>
+          <strong>19/18A, G Block, Tilak Nagar</strong>
+          <span>New Delhi 110018</span>
+        </div>
+        <div>
+          <span class="meta-label">Call</span>
+          <a href="tel:+919650767651">96507 67651</a>
+          <a href="tel:+918929469026">89294 69026</a>
+        </div>
+        <div>
+          <span class="meta-label">Hours</span>
+          <strong>Being confirmed</strong>
+          <span>No open/closed claim yet</span>
+        </div>
+        <div class="practical-action">
+          <a class="button button-sky" href="https://www.google.com/maps/search/?api=1&query=Nodda%20Paws%20Tilak%20Nagar" rel="noreferrer">Get directions</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shop-preview" id="shop">
+      <div class="shell">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">Fresh from the shop</p>
+            <h2>Cosy finds, picked with paws.</h2>
+          </div>
+          <div class="heading-note">
+            <p class="fraunces">The catalogue stays calm so the products can do the talking.</p>
+            <a class="text-link" href="shop.html">Browse the shop</a>
+          </div>
+        </div>
+
+        <div class="collection-banner">
+          <div>
+            <p class="eyebrow dark-label">Collection structure preview</p>
+            <h3>Winter Collection ’26</h3>
+            <p>Real product photography, sizes, prices and stock will replace the prototype states below.</p>
+          </div>
+          <a class="button button-paper" href="shop.html">View collection layout</a>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-media photo-placeholder"><span>Product packshot<br>required</span></div>
+            <div class="product-info">
+              <p class="product-kicker">Prototype product · Clothing</p>
+              <h3>Winter sweater product name</h3>
+              <p class="product-price">Price pending</p>
+              <div class="chip-row" aria-label="Prototype sizes"><span>S</span><span>M</span><span>L</span></div>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-media photo-placeholder"><span>On-pet photo<br>required</span></div>
+            <div class="product-info">
+              <p class="product-kicker">Prototype product · Essentials</p>
+              <h3>Pet essential product name</h3>
+              <p class="product-price">Price pending</p>
+              <div class="chip-row" aria-label="Prototype variants"><span>Variant 1</span><span>Variant 2</span></div>
+            </div>
+          </article>
+          <article class="product-card product-card-featured">
+            <div class="product-media photo-placeholder"><span>Blanket image<br>required</span></div>
+            <div class="product-info">
+              <p class="product-kicker">Prototype product · Bedding</p>
+              <h3>Cosy blanket product name</h3>
+              <p class="product-price">Price pending</p>
+              <div class="chip-row" aria-label="Prototype colours"><span>Colour 1</span><span>Colour 2</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services poster-blue" id="services">
+      <div class="shell">
+        <div class="section-heading light-heading">
+          <p class="eyebrow light-label">Care under one roof</p>
+          <h2>Come for the care. Stay for the tail wags.</h2>
+          <p>Service names and details remain honest until the client confirms packages, prices and rules.</p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <span class="service-word" aria-hidden="true">GROOM</span>
+            <h3>Grooming</h3>
+            <p>Fresh trim. Full strut. Call the team while services and prices are being confirmed.</p>
+            <a class="button button-sun" href="tel:+919650767651">Call for grooming</a>
+          </article>
+          <article class="service-card stepped">
+            <span class="service-word" aria-hidden="true">STAY</span>
+            <h3>Boarding</h3>
+            <p>Seen in their public captions. Eligibility, capacity, timings and prices remain open.</p>
+            <a class="button button-paper" href="tel:+919650767651">Ask the team</a>
+          </article>
+          <article class="service-card">
+            <span class="service-word" aria-hidden="true">PLAY</span>
+            <h3>Day care</h3>
+            <p>Seen in their Instagram highlights. Final naming and operating details remain open.</p>
+            <a class="button button-paper" href="tel:+919650767651">Ask the team</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section grooming-feature">
+      <div class="shell feature-grid">
+        <div class="feature-photo photo-placeholder photo-placeholder-tall">
+          <span>Real grooming<br>process photo required</span>
+          <em class="tape">Real care, close up.</em>
+        </div>
+        <div class="feature-copy">
+          <p class="eyebrow">The grooming studio</p>
+          <h2>Fresh trim. Full strut.</h2>
+          <p class="large-copy">The finished look matters. How a pet is handled matters more. This section will show the real process, people and verified service details.</p>
+          <ul class="plain-list">
+            <li>Real team and grooming photographs</li>
+            <li>Confirmed services and eligibility only</li>
+            <li>Call first; WhatsApp appears after confirmation</li>
+          </ul>
+          <a class="button button-ink" href="tel:+919650767651">Call the studio</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section feed-section">
+      <div class="shell">
+        <div class="section-heading split-heading light-heading">
+          <div>
+            <p class="eyebrow light-label">From @noddapaws</p>
+            <h2>Real pets. Real people. Big tail energy.</h2>
+          </div>
+          <p class="fraunces">Reels load from Instagram only after a visitor taps play.</p>
+        </div>
+
+        <div class="reel-rail" aria-label="Prototype Instagram reel posters">
+          <article class="reel-card">
+            <div class="reel-poster photo-placeholder photo-placeholder-dark">
+              <button type="button" class="play-button" aria-label="Prototype reel; Instagram embed not connected">Play</button>
+              <span>Approved reel poster</span>
+            </div>
+            <h3>Grooming moment</h3>
+            <p>Caption text will explain the reel outside the video.</p>
+          </article>
+          <article class="reel-card">
+            <div class="reel-poster photo-placeholder photo-placeholder-dark">
+              <button type="button" class="play-button" aria-label="Prototype reel; Instagram embed not connected">Play</button>
+              <span>Approved reel poster</span>
+            </div>
+            <h3>From the shop floor</h3>
+            <p>Public embed loads on tap; original files only if supplied.</p>
+          </article>
+          <article class="reel-card">
+            <div class="reel-poster photo-placeholder photo-placeholder-dark">
+              <button type="button" class="play-button" aria-label="Prototype reel; Instagram embed not connected">Play</button>
+              <span>Approved reel poster</span>
+            </div>
+            <h3>Noddy’s day</h3>
+            <p>Real captions replace this prototype description.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section notice-section">
+      <div class="shell notice-grid">
+        <div>
+          <p class="eyebrow">The noticeboard</p>
+          <h2>Offers, dated and honest.</h2>
+        </div>
+        <article class="offer-ticket">
+          <span class="status-label">No live offer</span>
+          <h3>No live offer right now.</h3>
+          <p>When one is confirmed, this notice will show exact dates, terms and how to claim it.</p>
+          <a class="text-link light-link" href="https://www.instagram.com/noddapaws/" rel="noreferrer">Follow @noddapaws</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section community" id="about">
+      <div class="shell community-grid">
+        <div class="community-collage" aria-label="Approved community and Noddy photos will appear here">
+          <div class="polaroid polaroid-large photo-placeholder"><span>Noddy portrait required</span></div>
+          <div class="polaroid polaroid-small photo-placeholder"><span>Drive photo required</span></div>
+          <span class="tape-strip" aria-hidden="true"></span>
+        </div>
+        <div>
+          <p class="eyebrow">Noddy’s neighbourhood</p>
+          <h2>A birthday shared with dogs who needed it most.</h2>
+          <p class="large-copy">From 17–27 October, Nodda Paws held a Birthday Donation Drive with Seva Sarathi, with a donation box outside the Tilak Nagar store.</p>
+          <p>This is a dated past activity. The final page will add approved photographs and confirmed details without presenting it as an ongoing programme.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section questions">
+      <div class="shell question-layout">
+        <div>
+          <p class="eyebrow">Before you call</p>
+          <h2>Quick, honest answers.</h2>
+        </div>
+        <div class="accordion">
+          <details>
+            <summary>Where is Nodda Paws?</summary>
+            <p>19/18A, G Block, Tilak Nagar, New Delhi 110018.</p>
+          </details>
+          <details>
+            <summary>What can I shop for?</summary>
+            <p>Public posts show winter sweaters, blankets and pet essentials. The complete catalogue is being prepared.</p>
+          </details>
+          <details>
+            <summary>How do I book grooming?</summary>
+            <p>Call the team for now. WhatsApp appears only after the client confirms the number and workflow.</p>
+          </details>
+          <details>
+            <summary>What are the opening hours?</summary>
+            <p>They are still being confirmed, so the prototype does not claim an open or closed status.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section visit-section" id="visit">
+      <div class="shell visit-grid">
+        <div>
+          <p class="eyebrow light-label">Come say hi</p>
+          <h2>19/18A, G Block, Tilak Nagar.</h2>
+          <p class="large-copy">Pet store, grooming studio and boarding / day-care destination in West Delhi.</p>
+          <div class="button-row">
+            <a class="button button-sun" href="https://www.google.com/maps/search/?api=1&query=Nodda%20Paws%20Tilak%20Nagar" rel="noreferrer">Get directions</a>
+            <a class="button button-outline-light" href="tel:+919650767651">Call 96507 67651</a>
+          </div>
+        </div>
+        <a class="map-placeholder" href="https://www.google.com/maps/search/?api=1&query=Nodda%20Paws%20Tilak%20Nagar" rel="noreferrer">
+          <span class="map-grid" aria-hidden="true"></span>
+          <strong>Open the verified Google Maps listing</strong>
+          <span>Map loads only when requested</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell">
+      <p class="footer-display" aria-hidden="true">Nodda Paws</p>
+      <div class="footer-grid">
+        <div>
+          <h2>Nodda Paws</h2>
+          <p>Curated By Paws, Approved By Tails.</p>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <a href="shop.html">Shop prototype</a>
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+        </div>
+        <div>
+          <h3>Visit</h3>
+          <p>19/18A, G Block<br>Tilak Nagar, New Delhi 110018</p>
+          <a href="tel:+919650767651">96507 67651</a>
+        </div>
+      </div>
+      <p class="fine-print">Design prototype only. Placeholder copy and media must not ship to production.</p>
+    </div>
+  </footer>
+
+  <nav class="mobile-dock" aria-label="Quick actions">
+    <a href="tel:+919650767651">Call</a>
+    <a href="shop.html">Shop</a>
+    <button type="button" class="dock-cart">Cart <span class="cart-count">0</span></button>
+  </nav>
+
+  <dialog class="search-dialog" aria-labelledby="search-title">
+    <form method="dialog" class="dialog-top">
+      <h2 id="search-title">Search the shop</h2>
+      <button type="submit" class="close-button">Close</button>
+    </form>
+    <label for="prototype-search">Product search prototype</label>
+    <input id="prototype-search" type="search" placeholder="Try “winter sweater”" autocomplete="off">
+    <p>This design demonstrates the search entry. Results connect to the real catalogue in the commerce build.</p>
+  </dialog>
+</body>
+</html>
+

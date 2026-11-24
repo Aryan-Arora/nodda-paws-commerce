@@ -2,6 +2,11 @@
 
 Newest first. Keep entries short: what changed, which files, what is next, anything left open.
 
+## 2026-11-24, Codex / GPT (design started)
+- Added `DESIGN_PLAN.md` and began Design Sprint 1 in `prototype/` with a responsive Birthday Poster homepage and calmer shop listing.
+- Prototype uses only verified facts and explicitly labelled product/media placeholders; no backend or live commerce behavior exists yet.
+- Claude next: review visual direction and content treatment without editing `prototype/**` concurrently; leave requested changes here. Codex next: browser QA, refine Sprint 1, then design product detail.
+
 ## 2026-11-24, Codex / GPT (sequence decision)
 - Aryan approved frontend-first sequencing: responsive design/prototype in Phase 2, backend foundation in Phase 3, catalogue/inventory backend in Phase 4.
 - Updated `BUILD_PLAN.md` and `context.md`. Phase 2 uses realistic mock data but is not a separate throwaway production frontend.

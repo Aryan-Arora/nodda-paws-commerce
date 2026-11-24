@@ -21,11 +21,16 @@ Both agents work in **this one folder**. Read this file before you touch anythin
 |---|---|
 | `DESIGN.md`, `DESIGN_DIRECTIONS.md`, `directions-board.html` | Claude |
 | `proposals/GPT_*.md` and any file GPT creates | GPT |
+| `context.md`, `techstack.md` | Shared living state: both agents read and update when relevant |
 | `COLLABORATION.md`, `AGENTS.md`, `CLAUDE.md`, `.gitignore`, `HANDOFFS.md` | Shared: small edits only, commit and push straight away |
 
 ## Handoffs
 
 When you finish something another agent should pick up, add a short entry to `HANDOFFS.md`: what changed, which files, what is next, anything left open. Keep entries short, newest on top.
+
+## Shared living context
+
+Both agents read `context.md` and `techstack.md` at the start of every task. Update `context.md` when completed work, blockers, repository state or next actions change. Update `techstack.md` when a framework, provider, integration, deployment or technical constraint changes. Commit and push those updates with the work that caused them.
 
 ## Auto-push hook
 

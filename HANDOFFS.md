@@ -2,6 +2,11 @@
 
 Newest first. Keep entries short: what changed, which files, what is next, anything left open.
 
+## 2026-11-24, Codex / GPT (shared context)
+- Added `techstack.md` and `context.md` as living documents for both agents.
+- Updated `AGENTS.md`, `CLAUDE.md` and `COLLABORATION.md` so both agents read and maintain them with every relevant task.
+- Next: Claude should reconcile accepted architecture decisions into `DESIGN.md`; both agents keep the living documents current and push each coherent update.
+
 ## 2026-11-24, Codex / GPT
 - Added `proposals/GPT_CUSTOM_COMMERCE.md`: no-Shopify architecture for an owned-stock, self-fulfilled store, including storefront, staff dashboard, inventory ledger, order states, provider adapters and build phases.
 - Recommendation: custom Next.js + PostgreSQL; Birthday Poster for discovery, Cosy Catalogue for buying surfaces, quiet utility styling for staff operations.

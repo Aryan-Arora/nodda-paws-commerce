@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nodda Paws: design directions board</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Caveat:wght@600&family=DM+Sans:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,400&family=Paytone+One&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f1ea;--ink:#14161d;--line:#d9d3c4}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.5 'DM Sans',system-ui,sans-serif}
+.wrap{max-width:1360px;margin:0 auto;padding:0 20px}
+header.top{padding:40px 0 20px}
+header.top h1{font:800 clamp(2rem,5vw,3.2rem)/1 'Bricolage Grotesque',sans-serif;margin:0 0 10px;letter-spacing:-.02em}
+header.top p{margin:0;max-width:70ch;color:#4b5060}
+.note{display:inline-block;margin-top:14px;padding:6px 10px;border:1px solid var(--line);border-radius:6px;background:#fff;font-size:.85rem}
+.cols{display:grid;gap:36px;padding:20px 0 60px}
+@media(min-width:1100px){.cols{grid-template-columns:repeat(3,1fr);gap:28px}}
+.col{min-width:0}
+.col h2{font:800 1.5rem/1.1 'Bricolage Grotesque',sans-serif;margin:0 0 4px}
+.col .tag{font-size:.9rem;color:#4b5060;margin:0 0 14px;min-height:3em}
+h3.k{font:700 .72rem/1 'DM Sans';letter-spacing:.14em;text-transform:uppercase;margin:20px 0 8px;color:#6a7080}
+.sw{display:grid;grid-template-columns:repeat(auto-fit,minmax(88px,1fr));gap:8px}
+.sw div{border:1px solid rgba(0,0,0,.18);border-radius:8px;overflow:hidden;font-size:.72rem;line-height:1.2;background:#fff}
+.sw i{display:block;height:44px}
+.sw span{display:block;padding:5px 7px}
+.spec{border:1px solid var(--line);background:#fff;border-radius:10px;padding:14px 16px}
+.spec .big{font-size:2.1rem;line-height:1;margin:0 0 8px}
+.spec .small{margin:0;font-size:.95rem;color:#3a3f4d}
+.phonewrap{display:flex;justify-content:center;margin-top:8px}
+.phone .nav,.phone .menu,.phone .tape{white-space:nowrap}
+.phone{width:340px;min-width:318px;max-width:100%;border:2px solid #20232c;border-radius:26px;overflow:hidden;background:#fff;box-shadow:0 18px 40px -22px rgba(0,0,0,.45)}
+.ph{background:repeating-linear-gradient(135deg,rgba(0,0,0,.08) 0 8px,transparent 8px 16px);display:grid;place-items:center;font:700 10px/1 'DM Sans';letter-spacing:.14em;text-transform:uppercase;color:rgba(0,0,0,.55)}
+.logo{width:34px;height:34px;border-radius:50%;border:3px solid #5395D0;background:#F1DC49;flex:none;box-shadow:inset 0 0 0 3px #fff}
+ul.pros{margin:0;padding-left:18px;font-size:.92rem}
+ul.pros li{margin:3px 0}
+
+/* ============ A. Birthday Poster ============ */
+.A{--sun:#FFC92B;--ink:#0A0F1C;--sky:#5395D0;--cream:#FFF6DC;--pink:#FF8DBF;background:var(--cream);color:var(--ink);font-family:'DM Sans'}
+.A .nav{background:var(--sun);border-bottom:3px solid var(--ink);padding:10px 14px;display:flex;align-items:center;gap:8px;font:400 17px 'Paytone One'}
+.A .nav .sp{flex:1}
+.A .cart{border:2.5px solid var(--ink);border-radius:8px;padding:5px 9px;font:700 11px 'DM Sans';box-shadow:2px 2px 0 var(--ink);background:var(--cream)}
+.A .hero{background:var(--sun);padding:20px 16px 0;position:relative;overflow:hidden}
+.A .hero:before{content:"";position:absolute;inset:0;background:radial-gradient(rgba(10,15,28,.2) 1.2px,transparent 1.5px) 0 0/12px 12px;-webkit-mask:linear-gradient(160deg,transparent 40%,#000);mask:linear-gradient(160deg,transparent 40%,#000)}
+.A .eyebrow{position:relative;display:inline-block;background:var(--ink);color:var(--sun);padding:5px 8px;border-radius:5px;font:700 9px 'DM Sans';letter-spacing:.14em;text-transform:uppercase;transform:rotate(-1.5deg)}
+.A h1{position:relative;font:400 41px/.9 'Paytone One';letter-spacing:-.02em;margin:12px 0;text-shadow:2px 2px 0 var(--cream)}
+.A h1 mark{background:var(--sky);color:var(--cream);padding:0 6px;border-radius:3px;text-shadow:none;display:inline-block;transform:rotate(-1.2deg)}
+.A .btns{position:relative;display:flex;gap:8px;flex-wrap:wrap}
+.A .btn{border:2.5px solid var(--ink);border-radius:8px;padding:9px 12px;font:700 12px 'DM Sans';box-shadow:3px 3px 0 var(--ink);background:var(--cream)}
+.A .btn.p{background:var(--ink);color:var(--cream);box-shadow:3px 3px 0 var(--sky)}
+.A .stage{position:relative;height:170px;margin-top:14px;display:grid;place-items:end center}
+.A .door{width:130px;height:150px;background:var(--sky);border:4px solid var(--ink);border-bottom:0;border-radius:65px 65px 0 0;box-shadow:0 0 0 5px var(--cream),0 0 0 7px var(--ink);display:grid;place-items:end center}
+.A .door .ph{width:76%;height:86%;border:2px dashed var(--cream);border-bottom:0;border-radius:52px 52px 0 0;color:var(--cream);background:none}
+.A .stk{position:absolute;right:20px;top:14px;background:var(--pink);border:2.5px solid var(--ink);border-radius:8px;padding:6px 9px;font:700 9px 'DM Sans';letter-spacing:.08em;text-transform:uppercase;box-shadow:3px 3px 0 var(--ink);transform:rotate(6deg)}
+.A .tape{background:var(--ink);color:var(--sun);padding:9px 0;white-space:nowrap;overflow:hidden;font:400 14px 'Paytone One';transform:rotate(-1.2deg);margin:0 -8px;box-shadow:0 4px 0 var(--sky)}
+.A .tape span{padding:0 8px}.A .tape i{color:var(--pink);font-style:normal}
+.A .sec{padding:22px 14px}
+.A .sec h2{font:400 26px/.95 'Paytone One';margin:0 0 12px}
+.A .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.A .card{border:3px solid var(--ink);border-radius:12px;background:#fff;box-shadow:5px 5px 0 var(--ink);padding:7px;position:relative}
+.A .card .ph{height:92px;border:2px solid var(--ink);border-radius:6px}
+.A .card b{display:block;font:700 12px 'DM Sans';margin:7px 0 2px}
+.A .price{position:absolute;right:-6px;top:6px;background:var(--sun);border:2.5px solid var(--ink);padding:3px 7px;font:400 11px 'Paytone One';transform:rotate(5deg);box-shadow:2px 2px 0 var(--ink)}
+.A .add{display:inline-block;margin-top:4px;background:var(--ink);color:var(--cream);border-radius:6px;padding:5px 9px;font:700 10px 'DM Sans'}
+.A .svc{background:var(--sky);color:var(--cream);padding:22px 14px}
+.A .svc h2{font:400 26px/.95 'Paytone One';margin:0 0 12px}
+.A .row{display:flex;gap:10px;align-items:center;background:var(--cream);color:var(--ink);border:3px solid var(--ink);border-radius:12px;padding:10px 12px;margin-bottom:10px;box-shadow:4px 4px 0 var(--ink)}
+.A .row s{text-decoration:none;font:400 26px 'Paytone One';color:transparent;-webkit-text-stroke:1.5px var(--ink)}
+.A .row b{font:400 16px 'Paytone One'}
+.A .row small{display:block;font:italic 400 11px 'Fraunces';color:#26468a}
+
+/* ============ B. Cosy Catalogue ============ */
+.B{--paper:#FBF4E4;--ink:#14213D;--sky:#5395D0;--sun:#F3C623;--blush:#F4B6C8;background:var(--paper);color:var(--ink);font-family:'DM Sans'}
+.B .nav{padding:12px 16px;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--ink)}
+.B .nav b{font:600 19px 'Fraunces'}
+.B .nav .sp{flex:1}.B .nav small{font:700 10px 'DM Sans';letter-spacing:.12em;text-transform:uppercase}
+.B .menu{display:flex;justify-content:space-between;padding:9px 16px;border-bottom:1px solid var(--ink);font:700 10px 'DM Sans';letter-spacing:.12em;text-transform:uppercase}
+.B .hero{padding:22px 16px}
+.B .kick{font:700 10px 'DM Sans';letter-spacing:.14em;text-transform:uppercase;color:var(--sky)}
+.B h1{font:600 36px/1.02 'Fraunces';letter-spacing:-.02em;margin:8px 0 8px}
+.B h1 em{font-style:italic;font-weight:400}
+.B .lede{font:italic 400 14px/1.4 'Fraunces';color:#3a4663;margin:0 0 14px}
+.B .btn{display:inline-block;background:var(--sun);border:1px solid var(--ink);padding:10px 16px;font:700 12px 'DM Sans';letter-spacing:.04em}
+.B .photo{margin:16px 0 0;height:230px;border:1px solid var(--ink)}
+.B .photo.ph{background:repeating-linear-gradient(135deg,rgba(20,33,61,.07) 0 10px,transparent 10px 20px),#ece0c4}
+.B .cap{font:italic 400 11px 'Fraunces';margin-top:5px;color:#3a4663}
+.B .sec{padding:20px 16px;border-top:1px solid var(--ink)}
+.B .sec h2{font:600 24px/1.05 'Fraunces';margin:0 0 12px}
+.B .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 12px}
+.B .card .ph{height:118px;border:1px solid var(--ink);background:repeating-linear-gradient(135deg,rgba(20,33,61,.07) 0 10px,transparent 10px 20px),#ece0c4}
+.B .card small{display:block;margin-top:7px;font:700 9px 'DM Sans';letter-spacing:.14em;text-transform:uppercase;color:var(--sky)}
+.B .card b{display:block;font:600 14px 'Fraunces'}
+.B .card span{font:500 13px 'DM Sans'}
+.B .chips{display:flex;gap:4px;margin-top:5px}.B .chips i{font-style:normal;border:1px solid var(--ink);padding:1px 5px;font:500 9px 'DM Sans'}
+.B .menu2 .it{display:flex;justify-content:space-between;gap:10px;padding:11px 0;border-bottom:1px solid var(--ink)}
+.B .menu2 b{font:600 16px 'Fraunces'}
+.B .menu2 span{font:italic 400 12px 'Fraunces';color:#3a4663;display:block}
+.B .menu2 a{font:700 10px 'DM Sans';letter-spacing:.12em;text-transform:uppercase;color:var(--sky);white-space:nowrap}
+.B .foot{background:var(--ink);color:var(--paper);padding:18px 16px;font:italic 400 13px 'Fraunces'}
+
+/* ============ C. Noddy's Neighbourhood ============ */
+.C{--sky:#5395D0;--sun:#FFD23F;--cream:#FFF8E7;--ink:#101624;--pink:#FF8DBF;--leaf:#6BA368;background:var(--sky);color:var(--ink);font-family:'DM Sans'}
+.C .nav{background:var(--cream);padding:10px 14px;display:flex;align-items:center;gap:8px;border-bottom:3px solid var(--ink);font:800 16px 'Bricolage Grotesque'}
+.C .nav .sp{flex:1}
+.C .nav small{font:700 10px 'DM Sans';border:2px solid var(--ink);padding:4px 8px;border-radius:6px}
+.C .hero{padding:20px 16px 8px;position:relative}
+.C h1{font:800 34px/.98 'Bricolage Grotesque';color:var(--cream);letter-spacing:-.02em;margin:0 0 8px}
+.C h1 u{text-decoration:none;background:linear-gradient(transparent 58%,var(--sun) 58% 92%,transparent 92%);color:var(--ink);padding:0 3px}
+.C .hand{font:600 20px 'Caveat';color:var(--cream);transform:rotate(-2deg);margin:0 0 10px}
+.C .board{position:relative;height:210px;margin:10px 0}
+.C .pol{position:absolute;background:var(--cream);padding:6px 6px 22px;border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink)}
+.C .pol .ph{width:100%;height:100%;border:1.5px solid var(--ink);background:repeating-linear-gradient(135deg,rgba(16,22,36,.08) 0 8px,transparent 8px 16px),#e9dcb8}
+.C .pol:before{content:"";position:absolute;top:-9px;left:50%;width:46px;height:15px;margin-left:-23px;background:rgba(255,141,191,.9);border:1px solid rgba(16,22,36,.3);transform:rotate(-4deg)}
+.C .p1{left:2px;top:8px;width:150px;height:170px;transform:rotate(-3deg)}
+.C .p2{right:4px;top:0;width:120px;height:120px;transform:rotate(3deg)}
+.C .p3{right:26px;top:118px;width:104px;height:92px;transform:rotate(-2deg)}
+.C .p1 span{position:absolute;bottom:3px;left:8px;font:600 15px 'Caveat'}
+.C .links{display:flex;gap:7px;flex-wrap:wrap;padding:0 16px 18px}
+.C .links a{background:var(--sun);border:2.5px solid var(--ink);border-radius:8px;padding:7px 10px;font:700 11px 'DM Sans';box-shadow:3px 3px 0 var(--ink)}
+.C .sec{background:var(--cream);border-top:3px solid var(--ink);padding:20px 14px}
+.C .sec h2{font:800 22px/1 'Bricolage Grotesque';margin:0 0 12px}
+.C .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px 12px}
+.C .card{position:relative;background:#fff;border:2px solid var(--ink);padding:6px 6px 8px;box-shadow:3px 3px 0 var(--ink)}
+.C .card:nth-child(1){transform:rotate(-1.6deg)}.C .card:nth-child(2){transform:rotate(1.4deg)}
+.C .card .ph{height:96px;border:1.5px solid var(--ink)}
+.C .card b{display:block;font:700 12px 'DM Sans';margin-top:6px}
+.C .card em{font:600 17px 'Caveat';font-style:normal;color:#b3365f}
+.C .kind{background:var(--leaf);color:#fff;border-top:3px solid var(--ink);padding:18px 14px}
+.C .kind .note2{background:var(--cream);color:var(--ink);border:2px solid var(--ink);padding:10px 12px;box-shadow:3px 3px 0 var(--ink);transform:rotate(-1deg)}
+.C .kind .note2 b{font:800 15px 'Bricolage Grotesque'}
+.C .kind .note2 span{display:block;font:600 16px 'Caveat';margin-top:2px}
+.C .foot{background:var(--ink);color:var(--cream);padding:14px;font:600 17px 'Caveat'}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <h1>Nodda Paws: design directions</h1>
+    <p>Three ways the website could look and feel. Each phone is a rough homepage sketch (hero, two products, services), not final design. Photo slots and the logo circle are placeholders; the real logo and photos replace them.</p>
+    <span class="note">Colours sampled from the logo and Instagram posters (approximate). Product prices are left blank on purpose: not confirmed.</span>
+  </header>
+
+  <div class="cols">
+
+    <!-- A -->
+    <section class="col">
+      <h2>A. Birthday Poster</h2>
+      <p class="tag">Yellow-first and loud, like their offer posts. The most recognisable and the most standout.</p>
+
+      <h3 class="k">Palette</h3>
+      <div class="sw">
+        <div><i style="background:#FFC92B"></i><span>sun<br>#FFC92B</span></div>
+        <div><i style="background:#0A0F1C"></i><span>ink<br>#0A0F1C</span></div>
+        <div><i style="background:#5395D0"></i><span>sky<br>#5395D0</span></div>
+        <div><i style="background:#FFF6DC"></i><span>cream<br>#FFF6DC</span></div>
+        <div><i style="background:#FF8DBF"></i><span>pink<br>#FF8DBF</span></div>
+      </div>
+
+      <h3 class="k">Type</h3>
+      <div class="spec">
+        <p class="big" style="font-family:'Paytone One'">Winter Edit '26</p>
+        <p class="small"><b>Paytone One</b> headlines · <b>DM Sans</b> body · <i style="font-family:Fraunces">Fraunces italic</i> captions</p>
+      </div>
+
+      <h3 class="k">Homepage sketch</h3>
+      <div class="phonewrap"><div class="phone A">
+        <div class="nav"><span class="logo"></span>Nodda Paws<span class="sp"></span><span class="cart">Cart 0</span></div>
+        <div class="hero">
+          <span class="eyebrow">Tilak Nagar · West Delhi</span>
+          <h1>Your pet’s favourite stop in <mark>West Delhi.</mark></h1>
+          <div class="btns"><span class="btn p">Shop Winter Collection</span><span class="btn">Book grooming</span></div>
+          <div class="stage"><div class="door"><div class="ph">Noddy photo</div></div><span class="stk">Noddy says hi</span></div>
+        </div>
+        <div class="tape"><span>Shop</span><i>✦</i><span>Grooming</span><i>✦</i><span>Boarding</span><i>✦</i><span>Day care</span><i>✦</i><span>Shop</span></div>
+        <div class="sec">
+          <h2>Winter Collection '26</h2>
+          <div class="grid">
+            <div class="card"><div class="ph">photo</div><span class="price">₹ ···</span><b>Winter sweater</b><span class="add">Add</span></div>
+            <div class="card"><div class="ph">photo</div><span class="price">₹ ···</span><b>Cosy blanket</b><span class="add">Add</span></div>
+          </div>
+        </div>
+        <div class="svc">
+          <h2>Three doors, one stop.</h2>
+          <div class="row"><s>01</s><div><b>Grooming</b><small>Fresh trim. Full strut.</small></div></div>
+          <div class="row"><s>02</s><div><b>Boarding</b><small>A good stay, a happy tail.</small></div></div>
+          <div class="row"><s>03</s><div><b>Day care</b><small>A good day out.</small></div></div>
+        </div>
+      </div></div>
+
+      <h3 class="k">Why pick it</h3>
+      <ul class="pros"><li>Closest to what followers already know</li><li>Highest standout and shareability</li><li>New offers are just another poster</li></ul>
+      <h3 class="k">Watch out for</h3>
+      <ul class="pros"><li>Can get tiring if everything shouts</li><li>Needs good product photos</li></ul>
+    </section>
+
+    <!-- B -->
+    <section class="col">
+      <h2>B. Cosy Catalogue</h2>
+      <p class="tag">A warm editorial lookbook. Products are the stars; best for a growing catalogue.</p>
+
+      <h3 class="k">Palette</h3>
+      <div class="sw">
+        <div><i style="background:#FBF4E4"></i><span>paper<br>#FBF4E4</span></div>
+        <div><i style="background:#14213D"></i><span>ink<br>#14213D</span></div>
+        <div><i style="background:#5395D0"></i><span>sky<br>#5395D0</span></div>
+        <div><i style="background:#F3C623"></i><span>sun<br>#F3C623</span></div>
+        <div><i style="background:#F4B6C8"></i><span>blush<br>#F4B6C8</span></div>
+      </div>
+
+      <h3 class="k">Type</h3>
+      <div class="spec">
+        <p class="big" style="font-family:Fraunces;font-weight:600">Winter, but <i style="font-weight:400">paw-shion</i></p>
+        <p class="small"><b style="font-family:Fraunces">Fraunces</b> headings · <b>DM Sans</b> body · <i style="font-family:Fraunces">Fraunces italic</i> captions</p>
+      </div>
+
+      <h3 class="k">Homepage sketch</h3>
+      <div class="phonewrap"><div class="phone B">
+        <div class="nav"><span class="logo"></span><b>Nodda Paws</b><span class="sp"></span><small>Search · Cart 0</small></div>
+        <div class="menu"><span>Shop</span><span>Grooming</span><span>Boarding</span><span>Day care</span></div>
+        <div class="hero">
+          <div class="kick">Winter Collection '26</div>
+          <h1>Winter, but make it <em>paw-shion.</em></h1>
+          <p class="lede">Cosy fits and warm blankets, picked by Noddy.</p>
+          <span class="btn">Shop the collection</span>
+          <div class="photo ph">lookbook photo</div>
+          <div class="cap">A real dog in a real sweater, shot at eye level.</div>
+        </div>
+        <div class="sec">
+          <h2>New this season</h2>
+          <div class="grid">
+            <div class="card"><div class="ph">photo</div><small>Apparel</small><b>Winter sweater</b><span>₹ ···</span><div class="chips"><i>S</i><i>M</i><i>L</i></div></div>
+            <div class="card"><div class="ph">photo</div><small>Bedding</small><b>Cosy blanket</b><span>₹ ···</span><div class="chips"><i>One size</i></div></div>
+          </div>
+        </div>
+        <div class="sec menu2">
+          <h2>Services</h2>
+          <div class="it"><div><b>Grooming</b><span>Bath, brush and a little pampering.</span></div><a>Book →</a></div>
+          <div class="it"><div><b>Boarding</b><span>Overnight stays, looked after.</span></div><a>Ask →</a></div>
+          <div class="it"><div><b>Day care</b><span>A day out while you are busy.</span></div><a>Ask →</a></div>
+        </div>
+        <div class="foot">Curated by paws, approved by tails.</div>
+      </div></div>
+
+      <h3 class="k">Why pick it</h3>
+      <ul class="pros"><li>Easiest to shop; scales to many products</li><li>Feels premium; lowest risk of clutter</li><li>Quickest to build</li></ul>
+      <h3 class="k">Watch out for</h3>
+      <ul class="pros"><li>Furthest from their current feed</li><li>Needs excellent product photography</li></ul>
+    </section>
+
+    <!-- C -->
+    <section class="col">
+      <h2>C. Noddy's Neighbourhood</h2>
+      <p class="tag">A community scrapbook: real photos, handwritten notes, local and human.</p>
+
+      <h3 class="k">Palette</h3>
+      <div class="sw">
+        <div><i style="background:#5395D0"></i><span>sky<br>#5395D0</span></div>
+        <div><i style="background:#FFD23F"></i><span>sun<br>#FFD23F</span></div>
+        <div><i style="background:#FFF8E7"></i><span>cream<br>#FFF8E7</span></div>
+        <div><i style="background:#101624"></i><span>ink<br>#101624</span></div>
+        <div><i style="background:#FF8DBF"></i><span>pink<br>#FF8DBF</span></div>
+        <div><i style="background:#6BA368"></i><span>leaf<br>#6BA368</span></div>
+      </div>
+
+      <h3 class="k">Type</h3>
+      <div class="spec">
+        <p class="big" style="font-family:'Bricolage Grotesque';font-weight:800">Hi, I'm Noddy.</p>
+        <p class="small"><b style="font-family:'Bricolage Grotesque'">Bricolage Grotesque</b> headings · <b>DM Sans</b> body · <b style="font-family:Caveat;font-size:1.15em">Caveat</b> notes</p>
+      </div>
+
+      <h3 class="k">Homepage sketch</h3>
+      <div class="phonewrap"><div class="phone C">
+        <div class="nav"><span class="logo"></span>Nodda Paws<span class="sp"></span><small>Cart 0</small></div>
+        <div class="hero">
+          <h1>Come say hi to <u>Noddy.</u></h1>
+          <p class="hand">your neighbourhood pet shop</p>
+          <div class="board">
+            <div class="pol p1"><div class="ph">Noddy portrait</div><span>that's me!</span></div>
+            <div class="pol p2"><div class="ph">photo</div></div>
+            <div class="pol p3"><div class="ph">photo</div></div>
+          </div>
+        </div>
+        <div class="links"><a>Shop</a><a>Grooming &amp; Boarding</a><a>Day care</a><a>Our kindness drive</a></div>
+        <div class="sec">
+          <h2>Pinned this week</h2>
+          <div class="grid">
+            <div class="card"><div class="ph">photo</div><b>Winter sweater</b><em>₹ ···</em></div>
+            <div class="card"><div class="ph">photo</div><b>Cosy blanket</b><em>₹ ···</em></div>
+          </div>
+        </div>
+        <div class="kind">
+          <div class="note2"><b>Noddy's birthday drive</b><span>shared with Seva Sarathi, 17 to 27 Oct. Thank you, everyone!</span></div>
+        </div>
+        <div class="foot">see you in Tilak Nagar ♡</div>
+      </div></div>
+
+      <h3 class="k">Why pick it</h3>
+      <ul class="pros"><li>Most human and local; showcases the kindness work</li><li>Great fit for reels and candid photos</li><li>Stands apart from chain stores</li></ul>
+      <h3 class="k">Watch out for</h3>
+      <ul class="pros"><li>Can get busy or childish without limits</li><li>Weaker for filtering many products</li></ul>
+    </section>
+
+  </div>
+</div>
+</body>
+</html>

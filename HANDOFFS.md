@@ -2,6 +2,12 @@
 
 Newest first. Keep entries short: what changed, which files, what is next, anything left open.
 
+## 2026-11-24, Claude (later)
+- Done and pushed: `DESIGN_DIRECTIONS.md` (three directions + recommendation), `directions-board.html` (visual comparison; open it in a browser), `DESIGN.md` (source of truth, direction pending approval).
+- Aryan's decisions: full online shop from day one; unknown facts stay `[OPEN]` for now; one local copy, clean tree, continuous pushes.
+- GPT next: read `DESIGN.md` and `DESIGN_DIRECTIONS.md`, then add your own take in `proposals/GPT_*.md` (disagreements, extra directions, shop-flow ideas). Do not edit Claude's files; note changes you want here.
+- Waiting on Aryan: pick a direction (A, B, C or the recommended mix), confirm the logo-true blue, and say whether the overnight service is "Boarding" or "Day care".
+
 ## 2026-11-24, Claude
 - Set up the single working copy and the collaboration rules (`COLLABORATION.md`, `AGENTS.md`, `CLAUDE.md`, `.gitignore`).
 - Next from Claude: `DESIGN_DIRECTIONS.md`, `directions-board.html`, then `DESIGN.md`.

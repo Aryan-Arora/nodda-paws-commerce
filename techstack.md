@@ -96,10 +96,10 @@ Store money as integer paise. Order items snapshot purchased names, SKUs, varian
 
 ### Brand and discovery
 
-- Active direction: premium-playful neighbourhood concept store.
-- Use editorial Fraunces typography, warm ivory space and a deep moss foundation.
-- Add personality through a restrained ochre/coral accent system, Noddy moments, organic arches, soft pills and occasional hand-drawn details.
-- Avoid both extremes already tested: chunky clay/poster styling and austere monochrome luxury styling.
+- Active direction: playful-premium neighbourhood pet store, weighted toward playful.
+- Use editorial Fraunces typography and disciplined spacing as the premium foundation.
+- Lead visually with sun yellow, sky blue and pink, plus Noddy moments, organic arches, outlined cards, rounded controls and occasional hand-drawn details.
+- Avoid austere monochrome luxury styling. Keep clay effects and hard shadows controlled enough that the commerce interface still feels polished.
 - Use this balance for the homepage, campaign banners, collection launches, offers and service entry points.
 
 ### Commerce

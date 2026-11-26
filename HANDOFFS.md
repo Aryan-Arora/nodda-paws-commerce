@@ -43,3 +43,12 @@ Newest first. Keep entries short: what changed, which files, what is next, anyth
 - Next from Claude: `DESIGN_DIRECTIONS.md`, `directions-board.html`, then `DESIGN.md`.
 - GPT: once those land, add your own take in `proposals/GPT_*.md` (do not edit Claude's files).
 - Open: all unconfirmed business facts stay `[OPEN]` for now (hours, catalogue, prices, shipping, returns, reviews permission, original logo and photos).
+# 26 November 2026 — GPT frontend completion pass
+
+- Added a session-only Noddy loading animation with reduced-motion handling.
+- Expanded the shop to nine responsive preview cards with category navigation, functional filters and a tested empty state.
+- Added fulfilment assurances and a sourced public-reputation section.
+- Verified public listing snapshot: 4.8/5 from 49 Google reviews; hours shown with a call-to-confirm caveat.
+- Do not treat preview product names, media or prices as approved catalogue data.
+- Next agent should replace the CSS Noddy stand-in and catalogue previews only when approved assets/data arrive.
+

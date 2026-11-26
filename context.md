@@ -102,11 +102,21 @@ Aryan has approved the broad sequencing: frontend design first, backend foundati
 
 Design Sprint 1 has started as reversible prototype work while remaining Phase 0/1 business facts stay open. The active visual direction is **playful-premium neighbourhood pet store**, deliberately leaning playful: bright sun yellow, sky blue and pink character moments, outlined cards, rounded controls and Noddy-led details. Premium quality comes from editorial Fraunces typography, generous spacing, disciplined commerce grids and restrained motion—not from muted or monochrome styling. Prototype placeholders are explicitly labelled and cannot ship to production.
 
+The current prototype now includes a session-only Noddy loading animation, a nine-card responsive catalogue, category navigation, working catalogue filters and empty state, fulfilment assurances, and a sourced public-reputation section. Product names, media and prices remain explicit catalogue previews until client inventory arrives.
+
+Public listing research checked 26 November 2026:
+
+- Google rating: 4.8/5 from 49 public reviews.
+- Rating/listing snapshot source checked the underlying Google Maps listing on 12 November 2026.
+- Publicly listed hours: 11:00–20:30 Monday–Saturday; 11:00–21:00 Sunday. The website says to confirm before visiting.
+- Individual review quotes were not added because no reliable first-party quote set was available for approval.
+
 ## Next recommended work
 
-1. Complete Phase 0 decisions in `BUILD_PLAN.md`.
-2. Begin Phase 1 catalogue and operations discovery with the client.
-3. Do not start transactional implementation until its preceding phase gate passes.
+1. Replace the Noddy CSS stand-in with the approved Noddy asset when supplied.
+2. Import the real catalogue, photography, prices, variants and inventory rules.
+3. Complete Phase 0 decisions in `BUILD_PLAN.md` and begin Phase 1 operations discovery.
+4. Do not start transactional implementation until its preceding phase gate passes.
 
 ## Current blockers
 

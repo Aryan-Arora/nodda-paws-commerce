@@ -88,6 +88,53 @@ document.querySelectorAll('.search-trigger').forEach((button) => {
   button.addEventListener('click', () => searchDialog?.showModal());
 });
 
+const searchInput = searchDialog?.querySelector('input[type="search"]');
+const searchResults = document.createElement('div');
+searchResults.className = 'search-results';
+searchResults.setAttribute('aria-live', 'polite');
+searchDialog?.append(searchResults);
+
+function getSearchableProducts() {
+  return [...document.querySelectorAll('.catalogue-card, .product-card')].map((card) => ({
+    card,
+    name: card.querySelector('h3')?.textContent.trim() || 'Nodda Paws favourite',
+    category: card.querySelector('.product-kicker')?.textContent.trim() || 'Shop favourite'
+  }));
+}
+
+function renderSearchResults(query = '') {
+  const normalized = query.trim().toLowerCase();
+  const products = getSearchableProducts().filter((product) => !normalized || `${product.name} ${product.category}`.toLowerCase().includes(normalized));
+  searchResults.replaceChildren();
+
+  const heading = document.createElement('p');
+  heading.className = 'search-summary';
+  heading.textContent = normalized ? `${products.length} matching shop previews` : 'Shop previews ready to search';
+  searchResults.append(heading);
+
+  products.slice(0, 6).forEach((product) => {
+    const item = document.createElement('button');
+    item.type = 'button';
+    item.className = 'search-result';
+    item.innerHTML = `<span>${product.category}</span><strong>${product.name}</strong>`;
+    item.addEventListener('click', () => {
+      searchDialog?.close();
+      product.card.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'center' });
+    });
+    searchResults.append(item);
+  });
+
+  if (!products.length) {
+    const empty = document.createElement('p');
+    empty.className = 'search-empty';
+    empty.textContent = 'No preview matches that search yet. Try clothing, sleep, walk or care.';
+    searchResults.append(empty);
+  }
+}
+
+searchInput?.addEventListener('input', () => renderSearchResults(searchInput.value));
+document.querySelectorAll('.search-trigger').forEach((button) => button.addEventListener('click', () => renderSearchResults(searchInput?.value || '')));
+
 const filterButton = document.querySelector('.filter-trigger');
 const filterPanel = document.querySelector('.filter-panel');
 const filterClose = document.querySelector('.filter-close');
@@ -164,11 +211,93 @@ document.querySelector('.empty-state .button')?.addEventListener('click', () => 
   applyCatalogueFilters();
 });
 
-document.querySelectorAll('.cart-action, .dock-cart').forEach((button) => {
-  button.addEventListener('click', () => {
-    window.alert('Cart interaction is designed in a later sprint. No product has been added.');
+const cartDialog = document.createElement('dialog');
+cartDialog.className = 'cart-drawer';
+cartDialog.setAttribute('aria-labelledby', 'cart-title');
+cartDialog.innerHTML = `
+  <div class="cart-drawer-head">
+    <div><p class="eyebrow">Your basket</p><h2 id="cart-title">Noddy’s picks</h2></div>
+    <button class="close-button" type="button" data-close-cart>Close</button>
+  </div>
+  <div class="cart-lines" data-cart-lines></div>
+  <div class="cart-drawer-foot">
+    <p><span>Subtotal</span><strong>Calculated after catalogue import</strong></p>
+    <button class="button button-ink" type="button" disabled>Checkout connects with live commerce</button>
+    <small>No order or payment is created in this frontend prototype.</small>
+  </div>`;
+document.body.append(cartDialog);
+
+let cart = JSON.parse(sessionStorage.getItem('nodda-preview-cart') || '[]');
+
+function saveCart() {
+  sessionStorage.setItem('nodda-preview-cart', JSON.stringify(cart));
+}
+
+function renderCart() {
+  const total = cart.reduce((sum, item) => sum + item.quantity, 0);
+  document.querySelectorAll('.cart-count').forEach((count) => {
+    count.textContent = String(total);
+    count.setAttribute('aria-label', `${total} items`);
   });
+
+  const lines = cartDialog.querySelector('[data-cart-lines]');
+  lines.replaceChildren();
+  if (!cart.length) {
+    lines.innerHTML = '<div class="cart-empty"><span aria-hidden="true">♡</span><h3>Your basket is waiting.</h3><p>Add a shop preview to test the cart experience.</p></div>';
+    return;
+  }
+
+  cart.forEach((item) => {
+    const line = document.createElement('article');
+    line.className = 'cart-line';
+    line.innerHTML = `<div class="cart-thumb" aria-hidden="true">NP</div><div><p>${item.category}</p><h3>${item.name}</h3><div class="quantity-control"><button type="button" aria-label="Decrease ${item.name}">−</button><span>${item.quantity}</span><button type="button" aria-label="Increase ${item.name}">+</button></div></div><button class="cart-remove" type="button">Remove</button>`;
+    const [decrease, increase] = line.querySelectorAll('.quantity-control button');
+    decrease.addEventListener('click', () => updateCart(item.name, -1));
+    increase.addEventListener('click', () => updateCart(item.name, 1));
+    line.querySelector('.cart-remove').addEventListener('click', () => removeFromCart(item.name));
+    lines.append(line);
+  });
+}
+
+function updateCart(name, change) {
+  const item = cart.find((entry) => entry.name === name);
+  if (!item) return;
+  item.quantity += change;
+  if (item.quantity <= 0) cart = cart.filter((entry) => entry.name !== name);
+  saveCart();
+  renderCart();
+}
+
+function removeFromCart(name) {
+  cart = cart.filter((entry) => entry.name !== name);
+  saveCart();
+  renderCart();
+}
+
+function addToCart(name, category) {
+  const existing = cart.find((entry) => entry.name === name);
+  if (existing) existing.quantity += 1;
+  else cart.push({ name, category, quantity: 1 });
+  saveCart();
+  renderCart();
+  cartDialog.showModal();
+}
+
+getSearchableProducts().forEach((product) => {
+  if (product.card.classList.contains('sold-out-card')) return;
+  const info = product.card.querySelector('.catalogue-card-info, .product-info');
+  if (!info) return;
+  const addButton = document.createElement('button');
+  addButton.type = 'button';
+  addButton.className = 'quick-add';
+  addButton.textContent = 'Quick add preview';
+  addButton.addEventListener('click', () => addToCart(product.name, product.category));
+  info.append(addButton);
 });
+
+document.querySelectorAll('.cart-action, .dock-cart').forEach((button) => button.addEventListener('click', () => cartDialog.showModal()));
+cartDialog.querySelector('[data-close-cart]').addEventListener('click', () => cartDialog.close());
+renderCart();
 
 document.querySelectorAll('.play-button').forEach((button) => {
   button.addEventListener('click', () => {

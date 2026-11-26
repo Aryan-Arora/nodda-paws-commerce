@@ -102,7 +102,7 @@ Aryan has approved the broad sequencing: frontend design first, backend foundati
 
 Design Sprint 1 has started as reversible prototype work while remaining Phase 0/1 business facts stay open. The active visual direction is **playful-premium neighbourhood pet store**, deliberately leaning playful: bright sun yellow, sky blue and pink character moments, outlined cards, rounded controls and Noddy-led details. Premium quality comes from editorial Fraunces typography, generous spacing, disciplined commerce grids and restrained motion—not from muted or monochrome styling. Prototype placeholders are explicitly labelled and cannot ship to production.
 
-The current prototype now includes a session-only Noddy loading animation, a nine-card responsive catalogue, category navigation, working catalogue filters and empty state, fulfilment assurances, and a sourced public-reputation section. Product names, media and prices remain explicit catalogue previews until client inventory arrives.
+The current prototype now includes a session-only Noddy loading animation, a nine-card responsive catalogue, category navigation, working catalogue filters and empty state, product search, quick-add controls, a session-persistent cart drawer with quantity/removal controls, fulfilment assurances, and a sourced public-reputation section. Checkout remains visibly disabled until real catalogue, inventory, order and payment systems exist. Product names, media and prices remain explicit catalogue previews until client inventory arrives.
 
 Public listing research checked 26 November 2026:
 

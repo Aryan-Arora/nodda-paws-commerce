@@ -47,6 +47,8 @@ Newest first. Keep entries short: what changed, which files, what is next, anyth
 
 - Added a session-only Noddy loading animation with reduced-motion handling.
 - Expanded the shop to nine responsive preview cards with category navigation, functional filters and a tested empty state.
+- Added working search, quick-add, session cart persistence, quantity controls and item removal.
+- Kept checkout disabled with explicit prototype messaging; this UI is the contract for later order/payment integration.
 - Added fulfilment assurances and a sourced public-reputation section.
 - Verified public listing snapshot: 4.8/5 from 49 Google reviews; hours shown with a call-to-confirm caveat.
 - Do not treat preview product names, media or prices as approved catalogue data.

@@ -52,6 +52,7 @@ The website must let customers browse and purchase stocked products, enquire abo
 - Added `BUILD_PLAN.md`, a gated 13-phase roadmap from decision lock through launch stabilization.
 - Added `DESIGN_PLAN.md` and started Design Sprint 1 with responsive homepage and shop-listing prototypes in `prototype/`.
 - Added the Sprint 1 motion system: one signature hero entrance, one-time section reveals, subtle card/button feedback and reduced-motion fades.
+- Added two decision reports in `reports/`: a complete brand/content system and an independent graphic-design review with P0/P1/P2 recommendations.
 
 ## Repository state
 
@@ -103,6 +104,8 @@ Aryan has approved the broad sequencing: frontend design first, backend foundati
 Design Sprint 1 has started as reversible prototype work while remaining Phase 0/1 business facts stay open. The active visual direction is **playful-premium neighbourhood pet store**, deliberately leaning playful: bright sun yellow, sky blue and pink character moments, outlined cards, rounded controls and Noddy-led details. Premium quality comes from editorial Fraunces typography, generous spacing, disciplined commerce grids and restrained motion—not from muted or monochrome styling. Prototype placeholders are explicitly labelled and cannot ship to production.
 
 The current prototype now includes a session-only Noddy loading animation, a nine-card responsive catalogue, category navigation, working catalogue filters and empty state, product search, quick-add controls, a session-persistent cart drawer with quantity/removal controls, fulfilment assurances, and a sourced public-reputation section. Checkout remains visibly disabled until real catalogue, inventory, order and payment systems exist. Product names, media and prices remain explicit catalogue previews until client inventory arrives.
+
+The approved working content direction is “a cheerful neighbourhood pet place that takes the work seriously.” The recommended master message is **“Good things for pets. Good people to ask.”** The independent design review found the concept distinctive but identified competing historical style layers in `prototype/styles.css`. Before expanding the interface, consolidate one visual system, lock typography, resolve complete product-card states and audit mobile sticky layers. Real Noddy, product, grooming and reel assets remain the largest expected visual-quality improvement.
 
 Public listing research checked 26 November 2026:
 

@@ -2,6 +2,12 @@
 
 Newest first. Keep entries short: what changed, which files, what is next, anything left open.
 
+## 2026-11-27, Codex / GPT (brand and design reports)
+- Added `reports/BRAND_CONTENT_REPORT.md`: positioning, voice, message hierarchy, full-site copy deck, SEO copy, proof requirements and content priorities.
+- Added `reports/GRAPHIC_DESIGN_REVIEW.md`: independent art-direction review with strengths, risks and P0/P1/P2 recommendations.
+- Recommended master message: “Good things for pets. Good people to ask.” Recommended visual principle: “Poster attracts → catalogue explains → checkout reassures.”
+- Next: consolidate the layered CSS into one system, lock typography and product-card behaviours, then replace placeholders when approved assets arrive.
+
 ## 2026-11-24, Codex / GPT (prototype motion)
 - Added restrained motion to `prototype/`: one-time hero entrance, IntersectionObserver section reveals, fine-pointer card feedback and search-dialog entrance.
 - Motion uses transform/opacity only, plays once, has no looping decoration and falls back to short opacity fades for reduced motion.
